@@ -119,5 +119,3 @@ Then open your browser to **[http://localhost:8000](http://localhost:8000)** to 
 | `analyze_data` | Aggregation, grouping, trends, correlations, outliers |
 | `create_visualization` | Line, bar, scatter, histogram, box, pie, heatmap |
 | `validate_result` | Verify output files and results |
-
----
