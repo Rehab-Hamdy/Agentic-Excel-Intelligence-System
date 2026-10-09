@@ -43,38 +43,38 @@ Here is a glimpse of what the agent can do, straight from our beautiful custom w
 ### 🔍 Read Data
 The agent can intelligently read and extract information from your spreadsheets.
 
-![Read](screenshots/Read.png)
+![Read](Screenshots/Read.png)
 
 ### 📊 Profile Data
 Instantly generate statistical profiles, check for missing values, and understand your data distributions.
 
-![Profile](screenshots/Profile.png)
+![Profile](Screenshots/Profile.png)
 
 ### 📈 Analyze Data
 Ask complex analytical questions, and the agent will group, aggregate, and calculate the exact answers.
 
-![Analyze](screenshots/Analyze.png)
+![Analyze](Screenshots/Analyze.png)
 
 ### 🎨 Create Visualizations
 The agent uses Plotly to generate beautiful, accurate charts (Bar, Line, Scatter, Pie, etc.) which appear instantly in the visualization dashboard.
 
-![Visualization](screenshots/Visualization.png)
+![Visualization](Screenshots/Visualization.png)
 
-![Visualization Output](screenshots/Visualization%20Output.png)
+![Visualization Output](Screenshots/Visualization%20Output.png)
 
 ### ✨ Create Excel Files
 Need a template or a new dataset? The agent can generate brand new, fully populated Excel files for you.
 
-![Create](screenshots/Create.png)
+![Create](Screenshots/Create.png)
 
 ### ✏️ Edit & Validate
 Add calculated columns, filter rows, and update cells. The agent always validates its work to ensure the Excel files are correctly saved!
 
-![Edit](screenshots/Edit.png)
+![Edit](Screenshots/Edit.png)
 
-![Edit Results](screenshots/Edit%20results.png)
+![Edit Results](Screenshots/Edit%20results.png)
 
-![Validate](screenshots/Validate.png)
+![Validate](Screenshots/Validate.png)
 
 ---
 
