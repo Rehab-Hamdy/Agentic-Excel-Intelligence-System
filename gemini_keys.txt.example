@@ -1,0 +1,13 @@
+# ==============================================================================
+# Gemini API Key Failover Pool Configuration
+# ==============================================================================
+# Copy this file to `gemini_keys.txt` to enable automatic API key rotation.
+# Put exactly ONE Google Gemini API key per line below.
+# 
+# The agent will automatically rotate to the next key in the list if one 
+# hits a rate limit (429) or runs out of tokens.
+# ==============================================================================
+
+# AIzaSyA_example_key_1_replace_me
+# AIzaSyB_example_key_2_replace_me
+# AIzaSyC_example_key_3_replace_me

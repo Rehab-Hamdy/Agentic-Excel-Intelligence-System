@@ -1,0 +1,33 @@
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment Variables & Secrets
+.env
+gemini_keys.txt
+*.key
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data Directories
+# (Uncomment the lines below if you want to ignore all input/output data)
+# data/input/*
+# data/output/*
+# !data/input/.gitkeep
+# !data/output/.gitkeep
+
+# IDEs and OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

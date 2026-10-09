@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Intelligence Agent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span>Excel Agent</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-content">
+                <div class="file-section">
+                    <h3><i class="fa-solid fa-folder-open"></i> Input Files</h3>
+                    <ul id="input-files-list" class="file-list">
+                        <li class="loading">Loading...</li>
+                    </ul>
+                </div>
+                
+                <div class="file-section">
+                    <h3><i class="fa-solid fa-chart-pie"></i> Output Files</h3>
+                    <ul id="output-files-list" class="file-list">
+                        <li class="loading">Loading...</li>
+                    </ul>
+                </div>
+                
+                <div class="file-section">
+                    <h3><i class="fa-solid fa-bolt"></i> Capabilities</h3>
+                    <ul class="file-list" id="capabilities-list">
+                        <li onclick="setInputValue('Read the contents of sales.xlsx and list the columns.')">🔍 Read Excel</li>
+                        <li onclick="setInputValue('Create a new Excel file called report.xlsx with some sample budget data.')">✨ Create Excel</li>
+                        <li onclick="setInputValue('Edit sales.xlsx to add a calculated profit column.')">✏️ Edit Excel</li>
+                        <li onclick="setInputValue('Profile the data in sales.xlsx and check for missing values.')">📊 Profile Data</li>
+                        <li onclick="setInputValue('Analyze sales.xlsx to find the top 5 products by revenue.')">📈 Analyze Data</li>
+                        <li onclick="setInputValue('Create a bar chart showing total revenue by region from sales.xlsx.')">🎨 Create Visualization</li>
+                        <li onclick="setInputValue('Validate that the new report.xlsx file was created correctly and has data.')">✅ Validate Result</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <button id="clear-chat-btn" class="action-btn">
+                    <i class="fa-solid fa-trash-can"></i> Clear History
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="agent-status">
+                    <span class="status-indicator online"></span>
+                    <span>Agent Ready</span>
+                </div>
+            </header>
+            
+            <div class="chat-container" id="chat-container">
+                <div class="welcome-screen">
+                    <div class="welcome-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h2>Ask me anything about your Excel files!</h2>
+                    <p>I can read data, create charts, perform analysis, and edit your workbooks.</p>
+                    <div class="suggestions">
+                        <button class="suggestion-btn" onclick="setInputValue('Analyze sales.xlsx and tell me the top trends.')">"Analyze sales.xlsx"</button>
+                        <button class="suggestion-btn" onclick="setInputValue('Create a scatter plot of revenue vs marketing spend.')">"Create a scatter plot"</button>
+                        <button class="suggestion-btn" onclick="setInputValue('Profile the data in my file and check for missing values.')">"Profile data"</button>
+                    </div>
+                </div>
+                <!-- Chat messages will be appended here -->
+            </div>
+            
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <textarea id="chat-input" placeholder="Type your request here (e.g., 'Analyze sales.xlsx')..." rows="1"></textarea>
+                    <button id="send-btn" title="Send message">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Dashboard/Visualization Area (Hidden by default, shown when charts are generated) -->
+        <aside class="dashboard-panel" id="dashboard-panel">
+            <div class="dashboard-header">
+                <h3><i class="fa-solid fa-image"></i> Visualizations</h3>
+                <button class="close-btn" id="close-dashboard"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="dashboard-content" id="dashboard-content">
+                <!-- Images will be injected here -->
+                <p class="empty-state">No visualizations generated yet.</p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
